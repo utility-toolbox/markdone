@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdone"
+description = "cli tool to freeze your markdown document"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">3.8"
+dependencies = [
+
+]
+dynamic = [
+    "version",
+]
+keywords = [
+
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Typing :: Typed",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/utility-library/markdone"
+"Source" = "https://github.com/utility-library/markdone"
+"Bug Tracker" = "https://github.com/utility-library/markdone/issues"
+
+[project.scripts]
+markdone = "markdone.__main__:main"
+
+[tool.setuptools]
+include-package-data = true
+package-dir = { "" = "src" }
+
+[tool.setuptools.dynamic]
+version = { attr = "markdone.__version__" }
